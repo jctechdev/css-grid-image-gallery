@@ -5,11 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
   <title>CSS Grid Image Gallery!</title>
 </head>
 
 <body>
-
+  <header class="header">
+    <h1 class="gallery-title">Cats Gallery</h1>
+  </header>
+ 
   <div class="overlay">
     <div class="overlay-inner">
       <button class="close">× Close</button>
@@ -31,8 +36,6 @@
       font-family: sans-serif;
       background: linear-gradient(to right, #F93D66, #6D47D9);
     }
-
-    h1,
     h2,
     h3,
     h4,
@@ -43,6 +46,19 @@
 
     p {
       margin: 0 0 20px 0;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+    .gallery-title {
+      font-family: 'Cedarville Cursive', cursive;
+      font-size: 3rem;
+      color: white;
+      text-align: center;
+      margin: 0 auto;
+      text-shadow: yellow;
     }
 
     .close {
