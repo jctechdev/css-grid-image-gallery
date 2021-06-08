@@ -32,7 +32,7 @@
     }
 
     body {
-      padding: 50px;
+      padding: 1em;
       font-family: sans-serif;
       background: linear-gradient(to right, #F93D66, #6D47D9);
     }
@@ -57,9 +57,9 @@
       font-size: 3rem;
       color: white;
       text-align: center;
-      margin: 0 auto;
-      text-shadow: yellow;
-      line-height: 1;
+      margin: 0 auto .5em;
+      text-shadow: yellow 5px 5px 15px;
+      line-height: 1.1;
     }
 
     .close {
@@ -122,7 +122,7 @@
       grid-row: span 2;
     }
     .item.v3 {
-      grid-row: span 3;
+      grid-row: span 2;
     }
     .item.v4 {
       grid-row: span 4;
@@ -202,10 +202,10 @@
       overlay.classList.remove('open');
     }
     // The Array.from () method returns an Array object from any object with a length property or an iterable object.
-
+   
     const digits = Array.from({ length: 50}, () => 
     [randomNumber(4), randomNumber(4)]).concat([[1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1]]);
-   console.log(digits);
+  
 
     const html = digits.map(generateHtml).join('');
     gallery.innerHTML = html;
@@ -215,7 +215,17 @@
     const items = document.querySelectorAll('.item');
     items.forEach(item => item.addEventListener('click', handleClick));
 
+    // function keyPressed(e) {
+    //   if (e.code == 27) 
+    //      close;
+    //   return false;
+    // }
+  
     overlayClose.addEventListener('click', close);
+    // overlayClose.addEventListener('keypress', keyPressed);
+ 
+
+    // document.addEventListener("keydown", e => console.log(e.keyCode))
 
   </script>
 </body>
